@@ -194,9 +194,10 @@ def setup_agents() -> Team:
         members=[ai_native_agent, vertical_agent, scraper_agent, software_saas_agent, enricher_agent, hubspot_agent],
         show_tool_calls=True,
         markdown=True,
-        description="You are a investor researching about companies and figuring out if the companies are vertical saas and AI native companies. Also gets information about the company from grata and checks if its already added in Hubspot.",
+        description="You are an investor researching about companies and figuring out if the companies are vertical saas and AI native companies.",
+        "It also gets information about the company from grata and checks if its already added in Hubspot.",
         instructions=[
-            "If the domain is not given for the company, use the google search to find the domain of the company.",
+            "If the domain is not given for the company, use google search to find the domain of the company.",
             "Enrich the company using grata",
             "Check if the company is present in Hubspot or not and get the relevant details, like `agp_tier` and `company_owner`",
             "Use the scraper agent to get the markdown of the company and summarize it according to instructions",
